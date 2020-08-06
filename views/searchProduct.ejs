@@ -1,0 +1,97 @@
+<%- include('partials/header'); -%>
+
+<!-- ACTIONS -->
+
+<section id="actions" class="py-4 mb-4 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <a href="/addProduct" class="btn btn-primary btn-block">
+          <i class="fas fa-plus"></i> Ajouter produit
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="/searchProduct" class="btn btn-success btn-block">
+          <i class="fas fa-plus"></i> Modifier produit
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="/deleteProduct" class="btn btn-warning btn-block">
+          <i class="fas fa-minus"></i> Supprimer produit
+        </a>
+      </div>
+    </div>
+
+    <%- include('partials/messages'); -%>
+  </div>
+</section>
+
+<!-- SEARCH -->
+
+<form action="/searchProduct" method="POST">
+  <section id="search" class="py-4 mb-4 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 ml-auto">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter le code barre du produit recherche..."
+              name="codeBarre"
+            />
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-primary">Rechercher</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</form>
+
+<!-- updateProduct
+  <form action="/updateProduct" method="POST">
+  <section id="updateProduct">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              <h4>Modifier le produit</h4>
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <label for="title">Code barre:</label>
+                  <input type="text" class="form-control" name="code" value="">
+                </div>
+                <div class="form-group">
+                  <label for="title">Nom produit:</label>
+                  <input type="text" class="form-control" name="nom">
+                </div>
+                <div class="form-group">
+                  <label for="title">Fournisseur:</label>
+                  <input type="text" class="form-control" name="four">
+                </div>
+                <div class="form-group">
+                  <label for="title">Quantite:</label>
+                  <input type="text" class="form-control" name="qte">
+                </div>
+                <div class="form-group">
+                  <label for="body">Date:</label>
+                  <input name="date" class="form-control"></input>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-success" data-dismiss="modal"><i class="fas fa-check"> </i>  Save Changes </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</form> -->
+
+<%- include('partials/footer'); -%>

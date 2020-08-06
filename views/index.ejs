@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style1.css" />
+    <title>Inventaire APP</title>
+  </head>
+  <body>
+    <h4><a href="/login">Click here to login</a></h4>
+
+    <div class="container" id="container">
+      <div class="circle"></div>
+
+      <p id="text"></p>
+
+      <div class="pointer-container">
+        <span class="pointer"></span>
+      </div>
+
+      <div class="gradient-circle"></div>
+    </div>
+
+    <script>
+      const container = document.getElementById("container");
+      const text = document.getElementById("text");
+
+      const totalTime = 7500;
+      const breatheTime = (totalTime / 5) * 2;
+      const holdTime = totalTime / 5;
+
+      breathAnimation();
+
+      function breathAnimation() {
+        text.innerText = "Welcome to !";
+        container.className = "container grow";
+
+        setTimeout(() => {
+          text.innerText = "Stockgen ";
+
+          setTimeout(() => {
+            text.innerText = "Our inventory App!";
+            container.className = "container shrink";
+          }, holdTime);
+        }, breatheTime);
+      }
+
+      setInterval(breathAnimation, totalTime);
+    </script>
+  </body>
+</html>

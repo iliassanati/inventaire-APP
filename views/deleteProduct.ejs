@@ -1,0 +1,57 @@
+<%- include('partials/header'); -%>
+
+  <!-- ACTIONS -->
+ 
+  <section id="actions" class="py-4 mb-4 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <a href="/addProduct" class="btn btn-primary btn-block">
+            <i class="fas fa-plus"></i> Ajouter produit
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="/searchProduct" class="btn btn-success btn-block">
+            <i class="fas fa-plus"></i> Modifier produit
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="/deleteProduct" class="btn btn-warning btn-block">
+            <i class="fas fa-minus"></i> Supprimer produit
+          </a>
+        </div>
+      </div>
+      <%- include('partials/messages'); -%>
+    </div>
+  </section>
+
+  <!-- updateProduct -->
+  <form action="/deleteProduct" method="POST">
+  <section id="updateProduct">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header bg-warning text-white">
+              <h4>Supprimer produit</h4>
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <label for="title">Code barre</label>
+                  <input type="text" class="form-control" name="code" placeholder="Entrer le code barre du produit a supprimer">
+                </div>
+                <div class="modal-footer">
+                 <button type="submit" class="btn btn-success" data-dismiss="modal" ><i class="fas fa-check"> </i>  Valider </button>
+                </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</form>
+
+<%- include('partials/footer'); -%>
